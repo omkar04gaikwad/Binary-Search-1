@@ -15,8 +15,8 @@ def searchMatrix(matrix, target) -> bool:
     R = m*n-1
     while L <= R:
         mid = (L+R)//2
-        r = mid // 3
-        c = mid % 3
+        r = mid // n
+        c = mid % n
         if r >= m or c >= n:
             return False
         if matrix[r][c] == target:
